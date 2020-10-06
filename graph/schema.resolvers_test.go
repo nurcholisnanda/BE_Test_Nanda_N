@@ -20,28 +20,28 @@ func TestCheckout(t *testing.T) {
 			Price: 49.99,
 			Qty:   10,
 		}
-		ItemTest = append(items, item)
+		ItemTest = append(ItemTest, item)
 		item = &model.Item{
 			Sku:   "43N23P",
 			Name:  "MacBook Pro",
 			Price: 5399.99,
 			Qty:   5,
 		}
-		ItemTest = append(items, item)
+		ItemTest = append(ItemTest, item)
 		item = &model.Item{
 			Sku:   "A304SD",
 			Name:  "Alexa Speaker",
 			Price: 109.5,
 			Qty:   10,
 		}
-		ItemTest = append(items, item)
+		ItemTest = append(ItemTest, item)
 		item = &model.Item{
 			Sku:   "234234",
 			Name:  "Raspberry Pi B",
 			Price: 30,
 			Qty:   2,
 		}
-		ItemTest = append(items, item)
+		ItemTest = append(ItemTest, item)
 		resolvers := Resolver{
 			items:        ItemTest,
 			checkoutItem: &model.CheckoutItem{},
