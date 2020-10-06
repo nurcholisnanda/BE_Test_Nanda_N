@@ -108,7 +108,7 @@ func (r *mutationResolver) Checkout(ctx context.Context, input []*model.InputIte
 						newInputItem.Qty = 1
 					}
 					inputItems = append(inputItems, newInputItem)
-				} else if inputItem.Name == "Raspberry Pi B" {
+				} else {
 					if hasMac {
 						break
 					}
@@ -118,8 +118,6 @@ func (r *mutationResolver) Checkout(ctx context.Context, input []*model.InputIte
 					inputItem.Sku = items[j].Sku
 					tmpPrice = tmpPrice + (items[j].Price * float64(inputItem.Qty))
 					inputItems = append(inputItems, inputItem)
-				} else {
-					return nil, errors.New("Sorry the item you request is unavailable")
 				}
 				break
 			}
