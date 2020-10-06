@@ -5,3 +5,4 @@
 set -e
 scripts/goget
 scripts/gocover
+scripts/buildBinary
