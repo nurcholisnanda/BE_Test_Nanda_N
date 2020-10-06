@@ -8,4 +8,4 @@ go test ./graph/... -covermode=count -coverprofile=cover.out
 go test ./graph/... -json > test-report.out
 go test ./graph/... -coverprofile=coverage.out
 go tool cover -func=cover.out
-$HOME/gopath/bin/goveralls -coverprofile=cover.out -service=travis-ci
+$HOME/gopath/bin/goveralls -coverprofile=cover.out -service=travis-ci -repotoken: $COVERALLS_TOKEN
