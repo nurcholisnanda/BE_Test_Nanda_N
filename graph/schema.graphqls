@@ -1,0 +1,31 @@
+type Item {
+  SKU: String!
+  Name: String!
+  Price: Float!
+  Qty: Int!
+}
+
+type CheckItem {
+  SKU: String!
+  Name: String!
+  Qty: Int!
+}
+
+input InputItem {
+  SKU: String
+  Name: String!
+  Qty: Int!
+}
+
+type CheckoutItem {
+  items: [CheckItem]
+  Price: Float!
+}
+
+type Query {
+  items: [Item!]!
+}
+
+type Mutation {
+  Checkout(input: [InputItem]): CheckoutItem!
+}
